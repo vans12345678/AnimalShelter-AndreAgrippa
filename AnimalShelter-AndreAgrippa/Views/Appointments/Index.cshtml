@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments";
+}
+
+<h1>Appointments</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Animal
+            </th>
+            <th>
+                Owner
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.animal.animalID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.owner.ownerID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.appointmentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.appointmentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.appointmentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

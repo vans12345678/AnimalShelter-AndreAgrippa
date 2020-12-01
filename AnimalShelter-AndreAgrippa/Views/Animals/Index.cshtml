@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Animal>
+
+@{
+    ViewData["Title"] = "Animals";
+}
+
+<h1>Animals</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Species
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Gender
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.species)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gender)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.animalID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.animalID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.animalID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
