@@ -55,13 +55,18 @@ namespace AnimalShelter_AndreAgrippa.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ownerID,firstname,lastname,phonenumber")] Owner owner)
         {
-            if (ModelState.IsValid)
+            if (owner.ValidateEntry(owner.firstname, owner.lastname, owner.phonenumber))
             {
-                _context.Add(owner);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(owner);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(owner);
             }
-            return View(owner);
+
+            return View("Fail");
         }
 
         // GET: Owners/Edit/5

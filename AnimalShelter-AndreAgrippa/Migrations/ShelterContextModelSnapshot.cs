@@ -26,8 +26,8 @@ namespace AnimalShelter_AndreAgrippa.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("age")
-                        .HasColumnType("int");
+                    b.Property<string>("age")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");

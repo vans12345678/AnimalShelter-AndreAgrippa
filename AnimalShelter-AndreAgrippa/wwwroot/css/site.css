@@ -6,8 +6,8 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
-.body {
-    background-color: #006400;
+.title-color {
+    background-color: #1b6ec2;
 }
 
 /* Provide sufficient contrast against white background */

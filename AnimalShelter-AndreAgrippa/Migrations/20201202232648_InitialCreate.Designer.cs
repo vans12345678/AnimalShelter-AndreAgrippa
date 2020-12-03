@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelter_AndreAgrippa.Migrations
 {
     [DbContext(typeof(ShelterContext))]
-    [Migration("20201201010002_InitialCreate")]
+    [Migration("20201202232648_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,8 +28,8 @@ namespace AnimalShelter_AndreAgrippa.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("age")
-                        .HasColumnType("int");
+                    b.Property<string>("age")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");

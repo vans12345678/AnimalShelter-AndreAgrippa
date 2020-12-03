@@ -55,13 +55,17 @@ namespace AnimalShelter_AndreAgrippa.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("animalID,species,age,gender")] Animal animal)
         {
-            if (ModelState.IsValid)
+            if (animal.ValidateEntry(animal.species, animal.age, animal.gender))
             {
-                _context.Add(animal);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(animal);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            return View(animal);
+            
+            return View("Fail");
         }
 
         // GET: Animals/Edit/5
