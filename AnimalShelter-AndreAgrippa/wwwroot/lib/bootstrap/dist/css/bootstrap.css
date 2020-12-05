@@ -206,7 +206,7 @@ svg {
 }
 
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 caption {
@@ -1514,24 +1514,24 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #004085;
 }
 
-.table th,
-.table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
-}
+    .table th,
+    .table td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid #1b6ec2;
+    }
 
-.table thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
-}
+    .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #1b6ec2;
+    }
 
-.table tbody + tbody {
-  border-top: 2px solid #dee2e6;
-}
+    .table tbody + tbody {
+        border-top: 2px solid #1b6ec2;
+    }
 
 .table-sm th,
 .table-sm td {
@@ -1776,11 +1776,11 @@ pre code {
   background-color: #343a40;
 }
 
-.table-dark th,
-.table-dark td,
-.table-dark thead th {
-  border-color: #454d55;
-}
+    .table-dark th,
+    .table-dark td,
+    .table-dark thead th {
+        border-color: #1b6ec2;
+    }
 
 .table-dark.table-bordered {
   border: 0;
@@ -1790,10 +1790,10 @@ pre code {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.table-dark.table-hover tbody tr:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
-}
+    .table-dark.table-hover tbody tr:hover {
+        color: #fff;
+        background-color: #1b6ec2;
+    }
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {
@@ -4101,7 +4101,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #1b6ec2;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
@@ -6589,6 +6589,9 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+}
+.bg-dark {
+    background-color: #000 !important;
 }
 
 .bg-transparent {
@@ -9905,7 +9908,10 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-  color: #343a40 !important;
+    color: #1b6ec2 !important;
+}
+.text-blue {
+    color: #d6d8db !important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10012,6 +10018,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   .table {
     border-collapse: collapse !important;
+      
   }
   .table td,
   .table th {

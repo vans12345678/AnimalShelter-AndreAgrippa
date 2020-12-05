@@ -1,4 +1,10 @@
-﻿using System;
+﻿
+// File: ShelterContext.cs
+// Name: Andre Agrippa
+// Date: 12 / 04 / 2020
+// Purpose: ShelterContext class that sets animal, owner and appointment in db
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -1,6 +1,41 @@
-﻿@{
+﻿<!--
+File: Privacy.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: Privacy page for appointment entry, also covers what valid data will be taken in
+-->
+@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
-
-<p>Use this page to detail your site's privacy policy.</p>
+<h1 class="title-color">@ViewData["Title"]</h1>
+<body class="bg-dark">
+    <p class="title-color">
+        <ul class="title-color">
+            <!--Privacy policy points-->
+            <li>All data strictly for display purposes on this website</li>
+            <li>This is not a real animal shelter, this is a project for NETD 3202 made by Andre Agrippa</li>
+        </ul>
+        <!--Animal validation points-->
+        <h3 class="title-color">Animal Validation</h3>
+        <ul class="title-color">
+            <li>All fields must have an entry</li>
+            <li>Animal name cannot be less than 2 characters</li>
+            <li>Animal age cannot be more than 2 characters</li>
+            <li>Animal gender must be either Female, Male, Boy or Girl</li>
+        </ul>
+        <!--Owner validation points-->
+        <h3 class="title-color">Owner Validation</h3>
+        <ul class="title-color">
+            <li>All fields must have an entry</li>
+            <li>Owner first name cannot be less than 1 character</li>
+            <li>Owner last name cannot be less than 1 character</li>
+            <li>Owner phone number must be exactly 10 numbers</li>
+        </ul>
+        <!--Appointment validation points-->
+        <h3 class="title-color">Appointment Validation</h3>
+        <ul class="title-color">
+            <li>All fields must have an entry</li>
+            <li>Must match animal ID with appropriate owner ID. Make sure you know which is which.</li>
+        </ul>
+    </p>
+</body>

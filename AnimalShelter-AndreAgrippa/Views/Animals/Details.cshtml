@@ -1,36 +1,50 @@
-﻿@model AnimalShelter_AndreAgrippa.Models.Animal
+﻿<!--
+File: Details.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: To view details for animal entry
+-->
+@model AnimalShelter_AndreAgrippa.Models.Animal
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="title-color">Details</h1>
+<body class=" bg-dark">
+    <div>
+        <h4 class="title-color">Animal</h4>
+        <hr />
 
-<div>
-    <h4>Animal</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.species)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.species)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.age)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.age)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.gender)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.gender)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.animalID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.animalName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.animalName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.species)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.species)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.age)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.animalID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>

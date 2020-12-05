@@ -1,3 +1,8 @@
+//File: Startup.cs
+//Name: Andre Agrippa
+//Date: 12 / 04 / 2020
+//Purpose: Startup page that deploys the webpage
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

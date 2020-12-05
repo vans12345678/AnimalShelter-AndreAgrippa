@@ -1,32 +1,44 @@
-﻿@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Animal>
+﻿<!--
+File: Index.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: Index page for animal entry
+-->
+@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Animal>
 
 @{
-    ViewData["Title"] = "Animals";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Animals</h1>
-
+<h1 class ="title-color">Index</h1>
+<body class="bg-dark">
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-dark">
     <thead>
-        <tr>
-            <th>
-                Species
-            </th>
-            <th>
-                Age
-            </th>
-            <th>
-                Gender
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            Animal Name
+        </th>
+        <th>
+            Species
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Age
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.animalName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.species)
             </td>
@@ -42,6 +54,7 @@
                 <a asp-action="Delete" asp-route-id="@item.animalID">Delete</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>
+</body>

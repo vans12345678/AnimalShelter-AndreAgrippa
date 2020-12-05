@@ -1,10 +1,18 @@
-﻿using System;
+﻿// File: Animal.cs
+// Name: Andre Agrippa
+// Date: 12 / 04 / 2020
+// Purpose: Animal class that has animal data members and getters/setters
+
+using System;
 
 namespace AnimalShelter_AndreAgrippa.Models
 {
     public class Animal
     {
+        //Private data members
         public int animalID { get; set; }
+
+        public string animalName { get; set; }
 
         public string species { get; set; }
 
@@ -12,16 +20,17 @@ namespace AnimalShelter_AndreAgrippa.Models
 
         public string gender { get; set; }
 
-        public bool ValidateEntry(string species, string age, string gender)
+        //This function validates animal entry
+        public bool ValidateEntry(string animalName, string species, string age, string gender)
         {
             int ageNum;
             string[] genders = {"Boy", "Girl", "Female", "Male"};
 
-            if (string.IsNullOrEmpty(species) || string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(age))
+            if (string.IsNullOrEmpty(animalName) || string.IsNullOrEmpty(species) || string.IsNullOrEmpty(gender) || string.IsNullOrEmpty(age))
             {
                 return false;
             }
-            if (age.Length > 3 || int.TryParse(age, out ageNum) == false)
+            if (animalName.Length < 2 || age.Length > 3 || int.TryParse(age, out ageNum) == false)
             {
                 return false;
             }

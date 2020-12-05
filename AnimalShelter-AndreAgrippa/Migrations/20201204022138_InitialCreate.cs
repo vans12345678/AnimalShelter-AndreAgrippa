@@ -13,6 +13,7 @@ namespace AnimalShelter_AndreAgrippa.Migrations
                 {
                     animalID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    animalName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     species = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     age = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     gender = table.Column<string>(type: "nvarchar(max)", nullable: true)

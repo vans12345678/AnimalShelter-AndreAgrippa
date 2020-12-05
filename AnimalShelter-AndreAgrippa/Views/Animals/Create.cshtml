@@ -1,43 +1,55 @@
-﻿@model AnimalShelter_AndreAgrippa.Models.Animal
+﻿<!--
+File: Create.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: To create animal entry
+-->
+@model AnimalShelter_AndreAgrippa.Models.Animal
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Animal</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="species" class="control-label"></label>
-                <input asp-for="species" class="form-control" />
-                <span asp-validation-for="species" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="age" class="control-label"></label>
-                <input asp-for="age" class="form-control" />
-                <span asp-validation-for="age" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="gender" class="control-label"></label>
-                <input asp-for="gender" class="form-control" />
-                <span asp-validation-for="gender" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<h1 class="title-color">Create</h1>
+<body class="bg-dark">
+    <h4>Animal</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="animalName" class="control-label title-color">Animal Name</label>
+                    <input asp-for="animalName" class="form-control" />
+                    <span asp-validation-for="animalName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="species" class="control-label title-color">Species</label>
+                    <input asp-for="species" class="form-control" />
+                    <span asp-validation-for="species" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="age" class="control-labe title-colorl">Age</label>
+                    <input asp-for="age" class="form-control" />
+                    <span asp-validation-for="age" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="gender" class="control-label title-color">Gender</label>
+                    <input asp-for="gender" class="form-control" />
+                    <span asp-validation-for="gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>

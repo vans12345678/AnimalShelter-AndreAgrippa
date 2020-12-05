@@ -1,17 +1,29 @@
-﻿@{
+﻿<!--
+File: Index.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: Index page for Animal Shelter website
+-->
+@{
     ViewData["Title"] = "Home Page";
 }
 <!doctype html>
 <html lang="en">
 <head>
     <title>NETD3202 - Ajax Animal Shelter</title>
-    <img id="img_logo" alt="Logo" src="~/Images/aas.PNG" width="250" height="250" />
 </head>
-<body>
-    <div >
-        <h1 class ="title-color">
+<body class="bg-dark">
+    <div>
+        <h1 class="title-color">
             Welcome
         </h1>
+        <p>
+            <h3 class="title-color">
+                This is the Ajax Animal Shelter where you can give unwanted animals a safe home.
+                To do so you'll have to register your animal and yourself as the owner to make an appointment
+                where we will take you and your animal in to be processed.
+            </h3>
+        </p>
     </div>
 </body>
 </html>

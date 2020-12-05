@@ -1,4 +1,8 @@
-﻿using System;
+﻿// File: AnimalsController.cs
+// Name: Andre Agrippa
+// Date: 12 / 04 / 2020
+// Purpose: Animals controller, returns views based on user selection
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -53,9 +57,9 @@ namespace AnimalShelter_AndreAgrippa.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("animalID,species,age,gender")] Animal animal)
+        public async Task<IActionResult> Create([Bind("animalID,animalName,species,age,gender")] Animal animal)
         {
-            if (animal.ValidateEntry(animal.species, animal.age, animal.gender))
+            if (animal.ValidateEntry(animal.animalName, animal.species, animal.age, animal.gender))
             {
                 if (ModelState.IsValid)
                 {
@@ -64,7 +68,7 @@ namespace AnimalShelter_AndreAgrippa.Controllers
                     return RedirectToAction(nameof(Index));
                 }
             }
-            
+
             return View("Fail");
         }
 
@@ -89,7 +93,7 @@ namespace AnimalShelter_AndreAgrippa.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("animalID,species,age,gender")] Animal animal)
+        public async Task<IActionResult> Edit(int id, [Bind("animalID,animalName,species,age,gender")] Animal animal)
         {
             if (id != animal.animalID)
             {

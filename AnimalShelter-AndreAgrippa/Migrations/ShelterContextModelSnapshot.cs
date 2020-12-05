@@ -29,6 +29,9 @@ namespace AnimalShelter_AndreAgrippa.Migrations
                     b.Property<string>("age")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("animalName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("gender")
                         .HasColumnType("nvarchar(max)");
 

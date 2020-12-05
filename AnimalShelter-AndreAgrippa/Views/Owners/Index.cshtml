@@ -1,47 +1,55 @@
-﻿@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Owner>
+﻿<!--
+File: Index.cshtml
+Name: Andre Agrippa
+Date: 12/04/2020
+Purpose: Index page for owner entry
+-->
+@model IEnumerable<AnimalShelter_AndreAgrippa.Models.Owner>
 
 @{
     ViewData["Title"] = "Owners";
 }
 
-<h1>Owners</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                First Name
-            </th>
-            <th>
-                Last Name
-            </th>
-            <th>
-                Phone Number
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.firstname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.lastname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.phonenumber)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ownerID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ownerID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ownerID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<h1 class="title-color">Owners</h1>
+<body class="bg-dark">
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.firstname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.phonenumber)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ownerID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ownerID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ownerID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
