@@ -1,5 +1,4 @@
-﻿
-// File: Owner.cs
+﻿// File: Owner.cs
 // Name: Andre Agrippa
 // Date: 12 / 04 / 2020
 // Purpose: Owner class that has owner data members and getters/setters
@@ -13,6 +12,7 @@ namespace AnimalShelter_AndreAgrippa.Models
 {
     public class Owner
     {
+        //Data members
         public int ownerID { get; set; }
 
         public string firstname { get; set; }

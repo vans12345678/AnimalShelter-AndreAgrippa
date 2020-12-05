@@ -9,7 +9,7 @@ namespace AnimalShelter_AndreAgrippa.Models
 {
     public class Animal
     {
-        //Private data members
+        //Data members
         public int animalID { get; set; }
 
         public string animalName { get; set; }

@@ -1,5 +1,4 @@
-﻿
-// File: ShelterContext.cs
+﻿// File: ShelterContext.cs
 // Name: Andre Agrippa
 // Date: 12 / 04 / 2020
 // Purpose: ShelterContext class that sets animal, owner and appointment in db

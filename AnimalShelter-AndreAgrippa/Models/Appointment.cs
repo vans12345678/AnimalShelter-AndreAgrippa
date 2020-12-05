@@ -13,8 +13,8 @@ namespace AnimalShelter_AndreAgrippa.Models
 {
     public class Appointment
     {
+        //Data members
         public int appointmentID { get; set; }
-
         public DateTime date { get; set; }
         public int animalID { get; set; }
         public int ownerID { get; set; }
